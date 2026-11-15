@@ -38,7 +38,7 @@ const Navber = () => {
         </div>
     <button className="btn btn-soft">Login</button>
 
-    <a className="btn btn-primary">Get Started</a>
+    <a className="btn btn-primary bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full">Get Started</a>
   </div>
 </div>
     </div>

@@ -1,6 +1,7 @@
 import './App.css'
 import Navber from './Components/Navber'
 import Banner from './Components/Banner/banner'
+import Stats from './Components/Banner/Stats/Stats'
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Navber></Navber>
 
     <Banner></Banner>
+
+    <Stats></Stats>
 
     </div>
   )
