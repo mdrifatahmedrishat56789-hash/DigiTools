@@ -15,9 +15,9 @@ const Product = () => {
         </div>
 
     <div className='flex items-center justify-center'>
-        <button onClick={()=> setProduct("product")} className={`btn ${product==="product" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost"}  text-[16px] p-3 `}>Products</button>
+        <button onClick={()=> setProduct("product")} className={`btn ${product==="product" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost rounded-full"}  text-[16px] p-3 `}>Products</button>
 
-        <button onClick={()=> setProduct("cart")} className={`btn ${product==="cart" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost" }`} >Cart (2)</button>
+        <button onClick={()=> setProduct("cart")} className={`btn ${product==="cart" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost rounded-full" }`} >Cart (2)</button>
 
     </div>
 

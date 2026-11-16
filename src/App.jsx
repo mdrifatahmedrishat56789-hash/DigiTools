@@ -4,6 +4,7 @@ import Banner from './Components/Banner/banner'
 import Stats from './Components/Banner/Stats/Stats'
 import Product from './Components/Products/Product'
 import Footer from './Components/footer/Footer'
+import Steps from './Components/Steps/Steps'
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
 
     <Product></Product>
 
+    
 
 
-
-
+    <Steps></Steps>
     <Footer></Footer>
 
     </div>
