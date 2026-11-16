@@ -7,6 +7,7 @@ import Footer from './Components/footer/Footer'
 import Steps from './Components/Steps/Steps'
 import Transparent from './Components/Transparent/Transparent'
 import { Suspense } from 'react'
+import { ToastContainer } from 'react-toastify/unstyled'
 
 const fetchProduct = async() =>{
   const res = await fetch("./data.json");
@@ -44,7 +45,8 @@ function App() {
 
     <Transparent></Transparent>
     <Footer></Footer>
-
+ 
+  <ToastContainer></ToastContainer>
     </div>
   )
 }

@@ -27,7 +27,7 @@ const Product = ({promiseProduct}) => {
         </div>
 
     
-        {product==="product" ? <Products Productss={Productss}></Products>  : <Cart></Cart> }
+        {product==="product" ? <Products Productss={Productss}></Products>  : <Cart Productss ={Productss}></Cart> }
     
 
     </div>
