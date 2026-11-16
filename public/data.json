@@ -1,4 +1,3 @@
-
 [
   {
     "id": 1,
@@ -8,11 +7,9 @@
     "period": "monthly",
     "tag": "Best Seller",
     "tagType": "best seller",
-    "features": [
-      "Unlimited AI generations",
-      "50+ writing templates",
-      "Grammar checker"
-    ],
+    "feature1": "Unlimited AI generations",
+    "feature2": "50+ writing templates",
+    "feature3": "Grammar checker",
     "icon": "https://i.ibb.co.com/LhHnDCG9/writing-2327400-1.png"
   },
   {
@@ -23,11 +20,9 @@
     "period": "one-time",
     "tag": "Popular",
     "tagType": "popular",
-    "features": [
-      "2000+ templates",
-      "Monthly updates",
-      "Commercial license"
-    ],
+    "feature1": "2000+ templates",
+    "feature2": "Monthly updates",
+    "feature3": "Commercial license",
     "icon": "https://i.ibb.co.com/Gfn2mDL7/design-tool.png"
   },
   {
@@ -38,11 +33,9 @@
     "period": "monthly",
     "tag": "New",
     "tagType": "new",
-    "features": [
-      "10M+ assets",
-      "Commercial use",
-      "No attribution"
-    ],
+    "feature1": "10M+ assets",
+    "feature2": "Commercial use",
+    "feature3": "No attribution",
     "icon": "https://i.ibb.co.com/WvRvPzhp/Group-7.png"
   },
   {
@@ -53,11 +46,9 @@
     "period": "monthly",
     "tag": "Popular",
     "tagType": "popular",
-    "features": [
-      "50+ automations",
-      "API access",
-      "Custom workflows"
-    ],
+    "feature1": "50+ automations",
+    "feature2": "API access",
+    "feature3": "Custom workflows",
     "icon": "https://i.ibb.co.com/JwQgyqK7/operation.png"
   },
   {
@@ -68,11 +59,9 @@
     "period": "one-time",
     "tag": "New",
     "tagType": "new",
-    "features": [
-      "100+ templates",
-      "ATS optimization",
-      "Export to PDF"
-    ],
+    "feature1": "100+ templates",
+    "feature2": "ATS optimization",
+    "feature3": "Export to PDF",
     "icon": "https://i.ibb.co.com/1GYn9Rnk/portfolio.png"
   },
   {
@@ -83,11 +72,9 @@
     "period": "monthly",
     "tag": "Best Seller",
     "tagType": "best seller",
-    "features": [
-      "5000+ assets",
-      "Scheduler included",
-      "Analytics dashboard"
-    ],
+    "feature1": "5000+ assets",
+    "feature2": "Scheduler included",
+    "feature3": "Analytics dashboard",
     "icon": "https://i.ibb.co.com/Z1kkLqVn/social-media.png"
   }
 ]
