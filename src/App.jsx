@@ -5,6 +5,7 @@ import Stats from './Components/Banner/Stats/Stats'
 import Product from './Components/Products/Product'
 import Footer from './Components/footer/Footer'
 import Steps from './Components/Steps/Steps'
+import Transparent from './Components/Transparent/Transparent'
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
 
 
     <Steps></Steps>
+
+    <Transparent></Transparent>
     <Footer></Footer>
 
     </div>
