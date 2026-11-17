@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-const Code = ({Product, isProduct, setIsProduct}) => {
+const Code = ({Product, isProduct, setIsProduct, isCoin, setisCoin}) => {
 
   const [selectProduct, IsSelectedproduct] = useState(false)
 
@@ -10,6 +10,9 @@ const Code = ({Product, isProduct, setIsProduct}) => {
     toast.success(`${Product.name} is Selected` )
 
     setIsProduct([...isProduct, Product])
+    return(
+    setisCoin(isCoin+Product.price)
+    )
   }
 
   return (

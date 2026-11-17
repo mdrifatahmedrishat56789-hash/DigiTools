@@ -8,6 +8,9 @@ import Products from './Products'
 const Product = ({promiseProduct, isProduct, setIsProduct}) => {
   const [product, setProduct] =useState ("product")
 
+   const [isCoin, setisCoin] = useState(0)
+
+
 
   const Productss = use(promiseProduct)
 
@@ -28,7 +31,7 @@ const Product = ({promiseProduct, isProduct, setIsProduct}) => {
         </div>
 
     
-        {product==="product" ? <Products isProduct={isProduct} setIsProduct={setIsProduct} Productss={Productss}></Products>  : <Cart isProduct={isProduct} setIsProduct={setIsProduct} ></Cart> }
+        {product==="product" ? <Products isCoin={isCoin} setisCoin={setisCoin} isProduct={isProduct} setIsProduct={setIsProduct} Productss={Productss}></Products>  : <Cart isCoin={isCoin} setisCoin={setisCoin} isProduct={isProduct} setIsProduct={setIsProduct} ></Cart> }
     
 
     </div>

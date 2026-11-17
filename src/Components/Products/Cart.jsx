@@ -2,7 +2,19 @@ import React from 'react'
 
 import { MdDelete } from 'react-icons/md'
 
-const Cart = ({ isProduct, setIsProduct}) => {
+const Cart = ({ isProduct, setIsProduct, isCoin}) => {
+
+ const handleDelete = (products) =>{
+  const filterProduct = isProduct.filter((isProducts) => isProducts.name !== products.name)
+
+  setIsProduct(filterProduct)
+ }
+
+ const handleProcedButton =() =>{
+  setIsProduct([])
+ }
+
+
   return (
     <div className='space-y-6 '>
 
@@ -11,7 +23,7 @@ const Cart = ({ isProduct, setIsProduct}) => {
       </div>
 
       {isProduct.length === 0 ? <div className='text-center'>
-        <h2 className='text-2xl font-bold'>No Card Select</h2>
+        <h2 className='text-4xl font-bold'>No Card Select</h2>
         <p className='text-xl '>Please Select Cart</p>
       </div> 
       : 
@@ -19,7 +31,7 @@ const Cart = ({ isProduct, setIsProduct}) => {
       
         isProduct.map((products) =>(
        <div className='space-y-8'>
-         <div className='border-[1px] flex items-center justify-between p-5'>
+         <div className=' flex items-center justify-between p-5'>
           <div className='flex gap-5'>
             <img src={products.icon} alt="" />
             <div>
@@ -28,14 +40,31 @@ const Cart = ({ isProduct, setIsProduct}) => {
             </div>
           </div>
           <div>
-            <button className='btn btn-active btn-error'><MdDelete></MdDelete> </button>
+            <button onClick={()=>handleDelete(products)} className='btn btn-active btn-error'><MdDelete></MdDelete> </button>
           </div>
         </div>
+
+        
        </div>
+
+                   
+
         ))
+        
       
       
       }
+
+   {isProduct.length === 0 ? null :    <div className='space-y-7'>
+          <div className='flex justify-between '>
+            <h3 className='text-2xl font-extrabold'>Total</h3>
+            <h3 className='text-2xl font-extrabold'>$ {isCoin}</h3>
+          </div>
+          <div>
+            <button onClick={handleProcedButton} className="btn btn-primary bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full text-2xl font-bold p-7">Proceed to Checkout</button>
+          </div>
+        </div>}
+
     </div>
   )
 }
