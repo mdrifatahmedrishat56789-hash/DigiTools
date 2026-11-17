@@ -2,16 +2,20 @@ import React from 'react'
 
 import { MdDelete } from 'react-icons/md'
 
-const Cart = ({ isProduct, setIsProduct, isCoin}) => {
+const Cart = ({ isProduct, setIsProduct, isCoin, setisCoin}) => {
 
  const handleDelete = (products) =>{
   const filterProduct = isProduct.filter((isProducts) => isProducts.name !== products.name)
 
   setIsProduct(filterProduct)
+
+  setisCoin((prevCoin) => prevCoin - products.price)
  }
 
  const handleProcedButton =() =>{
   setIsProduct([])
+    setisCoin(0)
+
  }
 
 
