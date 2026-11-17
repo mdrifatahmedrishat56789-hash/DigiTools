@@ -6,7 +6,7 @@ import Product from './Components/Products/Product'
 import Footer from './Components/footer/Footer'
 import Steps from './Components/Steps/Steps'
 import Transparent from './Components/Transparent/Transparent'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { ToastContainer } from 'react-toastify/unstyled'
 
 const fetchProduct = async() =>{
@@ -14,17 +14,21 @@ const fetchProduct = async() =>{
   return res.json();
 }
 
+  
+
+
 
 
 
 
 function App() {
   const promiseProduct = fetchProduct()
+  const[isProduct, setIsProduct] = useState([])
 
 
   return (
     <div className='container mx-auto'>
-      <Navber></Navber>
+      <Navber isProduct={isProduct} setIsProduct={setIsProduct}></Navber>
 
     <Banner></Banner>
 
@@ -33,7 +37,7 @@ function App() {
     <Suspense fallback = {<span className="loading loading-spinner loading-xl"></span>
 }>
 
-    <Product promiseProduct={promiseProduct}></Product>
+    <Product promiseProduct={promiseProduct} isProduct={isProduct} setIsProduct={setIsProduct}></Product>
     </Suspense>
 
     

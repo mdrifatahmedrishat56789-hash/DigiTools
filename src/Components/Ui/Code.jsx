@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-const Code = ({Product}) => {
+const Code = ({Product, isProduct, setIsProduct}) => {
 
   const [selectProduct, IsSelectedproduct] = useState(false)
 
   const handleButton = () =>{
     IsSelectedproduct(true)
     toast.success(`${Product.name} is Selected` )
+
+    setIsProduct([...isProduct, Product])
   }
 
   return (
@@ -47,7 +49,7 @@ const Code = ({Product}) => {
       
     </ul>
     <div className="mt-6">
-      <button onClick={handleButton} className={`btn ${selectProduct===true ? "bg-green-500" :" bg-gradient-to-r from-[#4F39F6] to-[#9514FA]"} text-white text-xl font-bold rounded-full btn-block`}>{selectProduct===true ? "Added to Cart" : "Buy Now"}</button>
+      <button onClick={handleButton} disabled ={selectProduct ? true : false} className={`btn ${selectProduct===true ? "bg-green-500" :" bg-gradient-to-r from-[#4F39F6] to-[#9514FA]"} text-white text-xl font-bold rounded-full btn-block`}>{selectProduct===true ? "Added to Cart" : "Buy Now"}</button>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@ import Group11 from "../../../src/assets/Group11.png"
 
 const Steps = () => {
   return (
-    <div className='mt-10 mb-10 space-y-7'>
+    <div className='mt-20 mb-10 space-y-7'>
         <div className='text-center space-y-2'>
             <h2 className='text-5xl font-extrabold'>Get Started in 3 Steps</h2>
             <p className='text-[16px] text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>

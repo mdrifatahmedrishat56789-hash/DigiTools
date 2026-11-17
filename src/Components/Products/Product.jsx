@@ -5,8 +5,9 @@ import Products from './Products'
 
 
 
-const Product = ({promiseProduct}) => {
+const Product = ({promiseProduct, isProduct, setIsProduct}) => {
   const [product, setProduct] =useState ("product")
+
 
   const Productss = use(promiseProduct)
 
@@ -22,12 +23,12 @@ const Product = ({promiseProduct}) => {
         <div className='flex items-center justify-center'>
         <button onClick={()=> setProduct("product")} className={`btn ${product==="product" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost rounded-full"}  text-[16px] p-3 `}>Products</button>
 
-        <button onClick={()=> setProduct("cart")} className={`btn ${product==="cart" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost rounded-full" }`} >Cart (2)</button>
+        <button onClick={()=> setProduct("cart")} className={`btn ${product==="cart" ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-bold text-white ": "btn-ghost rounded-full" }`} >Cart {isProduct.length}</button>
 
         </div>
 
     
-        {product==="product" ? <Products Productss={Productss}></Products>  : <Cart Productss ={Productss}></Cart> }
+        {product==="product" ? <Products isProduct={isProduct} setIsProduct={setIsProduct} Productss={Productss}></Products>  : <Cart isProduct={isProduct} setIsProduct={setIsProduct} ></Cart> }
     
 
     </div>
